@@ -1,0 +1,9 @@
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+# AIDL service types for LineageOS 23.2 HALs.
+
+type hal_lineage_health_service, hal_service_type, service_manager_type;
+type hal_lineage_livedisplay_service, hal_service_type, service_manager_type;
+type hal_lineage_powershare_service, hal_service_type, service_manager_type;
+type hal_lineage_touch_service, hal_service_type, service_manager_type;
