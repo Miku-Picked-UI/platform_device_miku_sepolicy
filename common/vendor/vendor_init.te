@@ -1,0 +1,2 @@
+# NFC
+set_prop(vendor_init, vendor_persist_nfc_prop);
