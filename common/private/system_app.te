@@ -4,6 +4,10 @@ get_prop(system_app, vendor_security_patch_level_prop)
 # Allow access to the HALs
 hal_client_domain(system_app, hal_lineage_touch)
 
+# Allow Settings (Picked features) to set fast wireless charging and Wireless PowerShare
+hal_client_domain(system_app, hal_lineage_health)
+hal_client_domain(system_app, hal_lineage_powershare)
+
 # Allow access to governor node
 allow system_app sysfs_devices_system_cpu:file write;
 
