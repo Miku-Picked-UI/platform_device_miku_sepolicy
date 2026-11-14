@@ -3,3 +3,6 @@ system_internal_prop(recovery_update_prop)
 
 # Miku-Picked UI: GPU driver switch request and status (sys.picked.mali.*)
 system_internal_prop(picked_mali_prop)
+
+# Miku-Picked UI: Play Integrity staging props (persist.sys.pif.*), served to DroidGuard by bionic
+system_internal_prop(pif_prop)

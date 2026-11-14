@@ -17,3 +17,6 @@ add_service(system_server, boost_framework_service);
 
 # Let system server toggle xtra-daemon
 set_prop(system_server, xtra_control_prop)
+
+# Miku-Picked UI: stage the Play Integrity props that bionic serves to DroidGuard
+set_prop(system_server, pif_prop)

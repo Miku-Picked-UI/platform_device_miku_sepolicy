@@ -14,3 +14,6 @@ persist.sys.xtra-daemon.enabled        u:object_r:xtra_control_prop:s0 exact boo
 
 # Miku-Picked UI: GPU driver switch (picked_mali_switch)
 sys.picked.mali.                       u:object_r:picked_mali_prop:s0
+
+# Miku-Picked UI: Play Integrity staging props read by bionic in DroidGuard
+persist.sys.pif.                       u:object_r:pif_prop:s0
