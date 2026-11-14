@@ -13,3 +13,7 @@ allow system_app sysfs_devices_system_cpu:file write;
 
 # Zygote
 allow system_app zygote:unix_stream_socket getopt;
+
+# Allow Settings (Picked features) to request a GPU driver switch and show the active driver
+set_prop(system_app, picked_mali_prop)
+get_prop(system_app, bootloader_prop)

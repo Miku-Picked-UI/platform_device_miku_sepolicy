@@ -21,3 +21,6 @@
 
 # Miku-Picked UI: custom emoji font (readable by all apps, written by system_server)
 /data/fonts/picked(/.*)?           u:object_r:font_data_file:s0
+
+# Miku-Picked UI: GPU driver switch helper
+/system_ext/bin/picked_mali_switch     u:object_r:picked_mali_switch_exec:s0

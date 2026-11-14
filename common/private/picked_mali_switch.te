@@ -1,0 +1,17 @@
+# Miku-Picked UI: root helper behind Settings' GPU driver switch. It patches the
+# five characters of the kernel image's mali.version token in the boot partition
+# (see vendor/miku/picked/mali_switch). Only the boot partition is writable.
+type picked_mali_switch, domain, coredomain;
+type picked_mali_switch_exec, system_file_type, exec_type, file_type;
+
+init_daemon_domain(picked_mali_switch)
+
+# Resolve /dev/block/by-name/boot to its node, then read and patch it.
+allow picked_mali_switch block_device:dir { getattr search };
+allow picked_mali_switch block_device:lnk_file { getattr read };
+allow picked_mali_switch boot_block_device:blk_file { getattr open read write };
+
+# The request and status (sys.picked.mali.*), and the active KMD (ro.boot.mali_version).
+get_prop(picked_mali_switch, picked_mali_prop)
+set_prop(picked_mali_switch, picked_mali_prop)
+get_prop(picked_mali_switch, bootloader_prop)
