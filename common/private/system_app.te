@@ -21,3 +21,6 @@ get_prop(system_app, bootloader_prop)
 # Allow Settings (Picked features) to import a custom boot animation
 allow system_app picked_bootanim_file:dir rw_dir_perms;
 allow system_app picked_bootanim_file:file create_file_perms;
+
+# Allow Settings (Picked features > Battery health) to read the battery's power_supply nodes
+r_dir_file(system_app, sysfs_batteryinfo)
