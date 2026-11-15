@@ -28,3 +28,7 @@ r_dir_file(system_app, sysfs_batteryinfo)
 # Allow Settings (Picked features > Desktop mode on a monitor) to set the desktop experience
 # property (persist.wm.debug.desktop_experience_devopts)
 set_prop(system_app, persist_wm_debug_prop)
+
+# Allow Settings (Picked features > Ad blocker) to write the merged hosts file and switch it
+allow system_app picked_adblock_file:dir rw_dir_perms;
+allow system_app picked_adblock_file:file create_file_perms;

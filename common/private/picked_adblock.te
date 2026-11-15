@@ -1,0 +1,5 @@
+# Miku-Picked UI: ad blocker. init bind-mounts /data/misc/picked_adblock/hosts over
+# /system/etc/hosts; the DNS resolver (in netd) reads it for every lookup.
+allow init picked_adblock_file:file { getattr open read };
+allow init system_file:file mounton;
+allow netd picked_adblock_file:file { getattr open read map };

@@ -3,3 +3,6 @@ type adbroot_data_file, file_type, data_file_type, core_data_file_type;
 
 # Miku-Picked UI: boot animation imported in Settings (written by Settings, played by bootanim)
 type picked_bootanim_file, file_type, data_file_type, core_data_file_type;
+
+# Miku-Picked UI: ad blocker hosts file (written by Settings, bind-mounted over /system/etc/hosts)
+type picked_adblock_file, file_type, data_file_type, core_data_file_type;

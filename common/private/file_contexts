@@ -27,3 +27,6 @@
 
 # Miku-Picked UI: imported boot animation (Settings writes it, bootanimation plays it)
 /data/misc/picked_bootanim(/.*)?   u:object_r:picked_bootanim_file:s0
+
+# Miku-Picked UI: ad blocker hosts file (bind-mounted over /system/etc/hosts by init)
+/data/misc/picked_adblock(/.*)?    u:object_r:picked_adblock_file:s0
