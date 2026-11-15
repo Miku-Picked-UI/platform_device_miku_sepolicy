@@ -11,3 +11,6 @@ type applock_service, system_api_service, system_server_service, service_manager
 # Boost Framework
 type boost_framework_service, system_api_service, system_server_service, service_manager_type;
 
+
+# [Evolution X] Pocket mode: PocketService in system_server, PocketManager in apps
+type pocket_service, app_api_service, system_server_service, service_manager_type;

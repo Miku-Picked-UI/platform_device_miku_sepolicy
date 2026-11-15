@@ -13,3 +13,6 @@ applock                                   u:object_r:applock_service:s0
 # Boost framework
 boost_framework                           u:object_r:boost_framework_service:s0
 
+
+# [Evolution X] Pocket mode (PocketService in system_server)
+pocket                                    u:object_r:pocket_service:s0
