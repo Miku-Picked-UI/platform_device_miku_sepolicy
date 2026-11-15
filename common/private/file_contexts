@@ -24,3 +24,6 @@
 
 # Miku-Picked UI: GPU driver switch helper
 /system_ext/bin/picked_mali_switch     u:object_r:picked_mali_switch_exec:s0
+
+# Miku-Picked UI: imported boot animation (Settings writes it, bootanimation plays it)
+/data/misc/picked_bootanim(/.*)?   u:object_r:picked_bootanim_file:s0

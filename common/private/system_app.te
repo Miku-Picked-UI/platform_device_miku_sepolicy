@@ -17,3 +17,7 @@ allow system_app zygote:unix_stream_socket getopt;
 # Allow Settings (Picked features) to request a GPU driver switch and show the active driver
 set_prop(system_app, picked_mali_prop)
 get_prop(system_app, bootloader_prop)
+
+# Allow Settings (Picked features) to import a custom boot animation
+allow system_app picked_bootanim_file:dir rw_dir_perms;
+allow system_app picked_bootanim_file:file create_file_perms;

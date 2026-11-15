@@ -1,0 +1,3 @@
+# Miku-Picked UI: play the boot animation imported in Settings (/data/misc/picked_bootanim)
+allow bootanim picked_bootanim_file:dir search;
+allow bootanim picked_bootanim_file:file { getattr open read map };
