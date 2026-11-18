@@ -23,11 +23,14 @@ allow system_app picked_bootanim_file:dir rw_dir_perms;
 allow system_app picked_bootanim_file:file create_file_perms;
 
 # Allow Settings (Picked features > Battery health) to read the battery's power_supply nodes
-r_dir_file(system_app, sysfs_batteryinfo)
+# Disabled locally: violates the platform neverallow in system/sepolicy/private/domain.te (full treble)
+# r_dir_file(system_app, sysfs_batteryinfo)
 
 # Allow Settings (Picked features > Desktop mode on a monitor) to set the desktop experience
 # property (persist.wm.debug.desktop_experience_devopts)
-set_prop(system_app, persist_wm_debug_prop)
+userdebug_or_eng(`
+  set_prop(system_app, persist_wm_debug_prop)
+')
 
 # Allow Settings (Picked features > Ad blocker) to write the merged hosts file and switch it
 allow system_app picked_adblock_file:dir rw_dir_perms;
